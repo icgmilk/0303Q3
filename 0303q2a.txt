@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{   
+    char word[15];
+    while(scanf("%15s",word)!= EOF){
+        char *tokenPtr = strtok(word,"()");
+        while(tokenPtr != NULL){
+            printf("%s ",tokenPtr);
+            tokenPtr = strtok(NULL,"-");
+        }
+    }
+    
+    
+}
